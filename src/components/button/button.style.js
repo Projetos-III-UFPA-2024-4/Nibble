@@ -3,7 +3,7 @@ export const styles = {
     width: "75%",
     height: 50,
     backgroundColor: "white", // Cor de fundo branca
-    borderWidth: 3, // Espessura da borda
+    borderWidth: 2.5, // Espessura da borda
     borderColor: "black", // Cor da borda
     borderRadius: 25, // Torna o botão oval (metade da altura)
     justifyContent: "center", // Centraliza o texto verticalmente
