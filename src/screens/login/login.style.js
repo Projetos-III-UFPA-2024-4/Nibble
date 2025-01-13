@@ -5,13 +5,4 @@ export const styles = {
     alignItems: 'center', // Centraliza os elementos horizontalmente
     backgroundColor: 'green', // Define o fundo como verde
   },
-  titulo: {
-    fontSize: 20,
-    fontFamily: "Fredoka-Medium",
-    color: "#78c129",
-  },
-  imagens: {
-    height: 100,
-    width: 100,
-  },
 };

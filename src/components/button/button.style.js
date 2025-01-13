@@ -1,6 +1,6 @@
 export const styles = {
   btn: {
-    width: "75%",
+    width: "70%",
     height: 50,
     backgroundColor: "white", // Cor de fundo branca
     borderWidth: 2.5, // Espessura da borda
@@ -8,7 +8,7 @@ export const styles = {
     borderRadius: 25, // Torna o botão oval (metade da altura)
     justifyContent: "center", // Centraliza o texto verticalmente
     alignItems: "center", // Centraliza o texto horizontalmente
-    marginTop: 10,
+    marginTop: 0,
   },
   texto: {
     color: "black", // Define a cor do texto como preto para contraste
