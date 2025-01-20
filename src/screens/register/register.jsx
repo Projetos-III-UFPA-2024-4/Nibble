@@ -1,12 +1,13 @@
 import { View, Text, TouchableOpacity } from "react-native";
-import { styles } from "./login.style.js";
+import { styles } from "./register.style.js";
 import AppLoading from "expo-app-loading"; // Use SplashScreen se necessário
 import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import Header from "../../components/header/header.jsx";
 import TextBox from "../../components/textbox/textBox.jsx";
 import Button from "../../components/button/button.jsx";
+// import Icon from "react-native-vector-icons/MaterialIcons"; // Altere o nome do pacote conforme o ícone desejado
 
-function Login() {
+function Register() {
   const fontsLoaded = useFredokaFonts();
 
   if (!fontsLoaded) {
@@ -15,38 +16,36 @@ function Login() {
 
   return (
     <View style={styles.container}>
-      <Header texto="Acesse sua conta" />
-
+      <Header texto="Crie sua conta" />
       <View style={styles.formGroup}>
         <View style={styles.form}>
-          <TextBox placeholder="Usuário" />
+          <TextBox placeholder="Nome Completo" />
         </View>
 
         <View style={styles.form}>
-          <TextBox placeholder="Senha" isPassword={true} />
+          <TextBox placeholder="Celular" />
         </View>
 
         <View style={styles.form}>
-          <Button title="Entrar" />
+          <TextBox placeholder="Escolha uma senha" isPassword={true}/>
+        </View>
+
+        <View style={styles.form}>
+          <TextBox placeholder="Confirme a senha" isPassword={true}/>
+        </View>
+
+        <View style={styles.form}>
+          <Button title="Próximo passo " />
         </View>
       </View>
 
       <View style={styles.footer}>
-        <TouchableOpacity>
-          <Text style={styles.footerText}>Esqueci minha senha</Text>
+        <TouchableOpacity onPress={() => console.log("Redirecionar para acesso de conta")}>
+          <Text style={styles.footerText}>Acesse sua conta</Text>
         </TouchableOpacity>
-
-        <View style={styles.footerLinkContainer}>
-          <Text>Não possui uma conta?</Text>
-          <TouchableOpacity
-            onPress={() => console.log("Redirecionar para cadastro")}
-          >
-            <Text style={styles.footerText1}>Crie agora</Text>
-          </TouchableOpacity>
-        </View>
       </View>
     </View>
   );
 }
 
-export default Login;
+export default Register;

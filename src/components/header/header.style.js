@@ -8,7 +8,6 @@ export const styles = {
     fontFamily: "Fredoka-Medium",
     color: "#78c129",
     textAlign: "center",
-    marginBottom: 50
   },
   header: {
     alignItems: "center",

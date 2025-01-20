@@ -9,7 +9,7 @@ export const styles = {
     paddingHorizontal: 15, // Espaçamento interno
     fontSize: 16, // Tamanho do texto
     color: "#000", // Cor do texto digitado
-    marginBottom: 20,
-    textAlign: "center"
+    // marginBottom: 20,
+    textAlign: "center",
   },
 };

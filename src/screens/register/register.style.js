@@ -17,21 +17,12 @@ export const styles = {
 
   footer: {
     width: "100%",
-    marginBottom: 10,
+    marginTop: 30
   },
   footerText: {
+    width: "100%",
     color: "white",
-    textAlign: "right",
-    marginRight: 60,
-  },
-  footerText1: {
-    color: "white",
-  },
-
-  footerLinkContainer: {
-    flexDirection: "row", // Organiza lado a lado
-    justifyContent: "center", // Centraliza horizontalmente
-    marginTop: 30,
+    textAlign:"center"
   },
   icon: {
     marginRight: 10,
