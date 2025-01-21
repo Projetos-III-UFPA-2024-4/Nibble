@@ -10,6 +10,18 @@ export const styles = {
     marginVertical: 15,
     alignItems: "center",
   },
+  form30: {
+    flex: 3,
+    marginVertical: 15,
+  },
+  form70: {
+    flex: 7,
+    marginVertical: 15,
+  },
+  formHorizontal: {
+    flexDirection: "row",
+
+  },
   formGroup: {
     width: "100%",
     marginTop: 20,
@@ -17,12 +29,12 @@ export const styles = {
 
   footer: {
     width: "100%",
-    marginTop: 30
+    marginTop: 30,
   },
   footerText: {
     width: "100%",
     color: "white",
-    textAlign:"center"
+    textAlign: "center",
   },
   icon: {
     marginRight: 10,

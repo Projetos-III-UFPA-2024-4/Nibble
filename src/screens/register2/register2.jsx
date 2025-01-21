@@ -16,31 +16,38 @@ function Register2() {
 
   return (
     <View style={styles.container}>
-      <Header texto="Crie sua conta" />
+      <Header texto="Informe seu endereço" />
       <View style={styles.formGroup}>
         <View style={styles.form}>
-          <TextBox placeholder="Nome Completo" />
+          <TextBox placeholder="Endereço" />
         </View>
 
         <View style={styles.form}>
-          <TextBox placeholder="Celular" />
+          <TextBox placeholder="Bairro" />
+        </View>
+
+        <View style={styles.formHorizontal}>
+          <View style={styles.form70}>
+            <TextBox placeholder="Cidade" isPassword={true} />
+          </View>
+          <View style={styles.form30}>
+            <TextBox placeholder="UF" />
+          </View>
         </View>
 
         <View style={styles.form}>
-          <TextBox placeholder="Escolha uma senha" isPassword={true}/>
+          <TextBox placeholder="CEP" isPassword={true} />
         </View>
 
         <View style={styles.form}>
-          <TextBox placeholder="Confirme a senha" isPassword={true}/>
-        </View>
-
-        <View style={styles.form}>
-          <Button title="Próximo passo " />
+          <Button title="Criar minha conta " />
         </View>
       </View>
 
       <View style={styles.footer}>
-        <TouchableOpacity onPress={() => console.log("Redirecionar para acesso de conta")}>
+        <TouchableOpacity
+          onPress={() => console.log("Redirecionar para acesso de conta")}
+        >
           <Text style={styles.footerText}>Acesse sua conta</Text>
         </TouchableOpacity>
       </View>
