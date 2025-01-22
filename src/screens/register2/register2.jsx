@@ -18,10 +18,14 @@ function Register2() {
     <View style={styles.container}>
       <Header texto="Informe seu endereço" />
       <View style={styles.formGroup}>
-        <View style={styles.form}>
-          <TextBox placeholder="Endereço" />
+        <View style={styles.formHorizontal}>
+          <View style={styles.form70}>
+            <TextBox placeholder="Endereço" />
+          </View>
+          <View style={styles.form30}>
+            <TextBox placeholder="Num." />
+          </View>
         </View>
-
         <View style={styles.form}>
           <TextBox placeholder="Bairro" />
         </View>

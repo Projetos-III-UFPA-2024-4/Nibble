@@ -5,7 +5,7 @@ import Register2 from "./src/screens/register2/register2.jsx";
 export default function App() {
 
   return (<>
-    <Register2/>
+    <Login/>
   </>
   );
 }

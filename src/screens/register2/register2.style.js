@@ -13,14 +13,16 @@ export const styles = {
   form30: {
     flex: 3,
     marginVertical: 15,
+    marginRight: 25,
   },
   form70: {
     flex: 7,
     marginVertical: 15,
+    marginLeft: 55,
+    marginRight: -70,
   },
   formHorizontal: {
     flexDirection: "row",
-
   },
   formGroup: {
     width: "100%",

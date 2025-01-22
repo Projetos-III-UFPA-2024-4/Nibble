@@ -5,8 +5,16 @@ import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import Header from "../../components/header/header.jsx";
 import TextBox from "../../components/textbox/textBox.jsx";
 import Button from "../../components/button/button.jsx";
+import { useState } from "react";
 
 function Login() {
+  const [email, useEmail] = useState("");
+  const [password, usePassword] = useState();
+
+  function ProcessLogin() {
+    console.log("Acessando ...");
+  }
+
   const fontsLoaded = useFredokaFonts();
 
   if (!fontsLoaded) {
@@ -19,7 +27,7 @@ function Login() {
 
       <View style={styles.formGroup}>
         <View style={styles.form}>
-          <TextBox placeholder="Usuário" />
+          <TextBox placeholder="E-mail" />
         </View>
 
         <View style={styles.form}>
@@ -27,7 +35,7 @@ function Login() {
         </View>
 
         <View style={styles.form}>
-          <Button title="Entrar" />
+          <Button title="Entrar" onPress={ProcessLogin} />
         </View>
       </View>
 
@@ -37,7 +45,7 @@ function Login() {
         </TouchableOpacity>
 
         <View style={styles.footerLinkContainer}>
-          <Text>Não possui uma conta?</Text>
+          <Text>Não possui uma conta? </Text>
           <TouchableOpacity
             onPress={() => console.log("Redirecionar para cadastro")}
           >
