@@ -5,9 +5,15 @@ import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import Header from "../../components/header/header.jsx";
 import TextBox from "../../components/textbox/textBox.jsx";
 import Button from "../../components/button/button.jsx";
-// import Icon from "react-native-vector-icons/MaterialIcons"; // Altere o nome do pacote conforme o ícone desejado
 
-function Register2() {
+function Register2(props) {
+  const [address, setAddress] = useState("");
+  const [number, setNumber] = useState("");
+  const [district, setDistrict] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+  const [cep, setCep] = useState("");
+
   const fontsLoaded = useFredokaFonts();
 
   if (!fontsLoaded) {
@@ -20,27 +26,51 @@ function Register2() {
       <View style={styles.formGroup}>
         <View style={styles.formHorizontal}>
           <View style={styles.form70}>
-            <TextBox placeholder="Endereço" />
+            <TextBox
+              placeholder="Endereço"
+              onChangeText={(texto) => setAddress(texto)}
+              value={address}
+            />
           </View>
           <View style={styles.form30}>
-            <TextBox placeholder="Num." />
+            <TextBox
+              placeholder="Num."
+              onChangeText={(texto) => setNumber(texto)}
+              value={number}
+            />
           </View>
         </View>
         <View style={styles.form}>
-          <TextBox placeholder="Bairro" />
+          <TextBox
+            placeholder="Bairro"
+            onChangeText={(texto) => setDistrict(texto)}
+            value={district}
+          />
         </View>
 
         <View style={styles.formHorizontal}>
           <View style={styles.form70}>
-            <TextBox placeholder="Cidade" isPassword={true} />
+            <TextBox
+              placeholder="Cidade"
+              onChangeText={(texto) => setCity(texto)}
+              value={city}
+            />
           </View>
           <View style={styles.form30}>
-            <TextBox placeholder="UF" />
+            <TextBox
+              placeholder="UF"
+              onChangeText={(texto) => setState(texto)}
+              value={state}
+            />
           </View>
         </View>
 
         <View style={styles.form}>
-          <TextBox placeholder="CEP" isPassword={true} />
+          <TextBox
+            placeholder="CEP"
+            onChangeText={(texto) => setCep(texto)}
+            value={cep}
+          />
         </View>
 
         <View style={styles.form}>
@@ -48,13 +78,13 @@ function Register2() {
         </View>
       </View>
 
-      <View style={styles.footer}>
+      {/* <View style={styles.footer}>
         <TouchableOpacity
-          onPress={() => console.log("Redirecionar para acesso de conta")}
+          onPress={() => props.navigation.navigate("login")}
         >
           <Text style={styles.footerText}>Acesse sua conta</Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
     </View>
   );
 }

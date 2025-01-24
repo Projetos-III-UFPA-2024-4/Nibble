@@ -4,6 +4,7 @@ export const styles = {
     justifyContent: "center", // Centraliza os elementos verticalmente
     alignItems: "center", // Centraliza os elementos horizontalmente
     backgroundColor: "green", // Define o fundo como verde
+    marginTop: -80
   },
   form: {
     width: "100%",

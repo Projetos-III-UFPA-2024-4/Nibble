@@ -7,9 +7,10 @@ import TextBox from "../../components/textbox/textBox.jsx";
 import Button from "../../components/button/button.jsx";
 import { useState } from "react";
 
-function Login() {
-  const [email, useEmail] = useState("");
-  const [password, usePassword] = useState();
+function Login(props) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState();
+
 
   function ProcessLogin() {
     console.log("Acessando ...");
@@ -47,7 +48,7 @@ function Login() {
         <View style={styles.footerLinkContainer}>
           <Text>Não possui uma conta? </Text>
           <TouchableOpacity
-            onPress={() => console.log("Redirecionar para cadastro")}
+            onPress={() => props.navigation.navigate("register")}
           >
             <Text style={styles.footerText1}>Crie agora</Text>
           </TouchableOpacity>

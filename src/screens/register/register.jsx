@@ -1,13 +1,18 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import { styles } from "./register.style.js";
-import AppLoading from "expo-app-loading"; // Use SplashScreen se necessário
+import AppLoading from "expo-app-loading";
 import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import Header from "../../components/header/header.jsx";
 import TextBox from "../../components/textbox/textBox.jsx";
 import Button from "../../components/button/button.jsx";
-// import Icon from "react-native-vector-icons/MaterialIcons"; // Altere o nome do pacote conforme o ícone desejado
+import { useState } from "react";
 
-function Register() {
+function Register(props) {
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState();
+  const [password1, setPassword1] = useState();
+  const [password2, setPassword2] = useState();
+
   const fontsLoaded = useFredokaFonts();
 
   if (!fontsLoaded) {
@@ -19,33 +24,53 @@ function Register() {
       <Header texto="Crie sua conta" />
       <View style={styles.formGroup}>
         <View style={styles.form}>
-          <TextBox placeholder="Nome Completo" />
+          <TextBox
+            placeholder="Nome Completo"
+            onChangeText={(texto) => setNome(texto)}
+            value={nome}
+          />
         </View>
 
         <View style={styles.form}>
-          <TextBox placeholder="Celular" />
+          <TextBox
+            placeholder="E-mail"
+            onChangeText={(texto) => setEmail(texto)}
+            value={email}
+          />
         </View>
 
         <View style={styles.form}>
-          <TextBox placeholder="Escolha uma senha" isPassword={true}/>
+          <TextBox
+            placeholder="Escolha uma senha"
+            isPassword={true}
+            onChangeText={(texto) => setPassword1(texto)}
+            value={password1}
+          />
         </View>
 
         <View style={styles.form}>
-          <TextBox placeholder="Confirme a senha" isPassword={true}/>
+          <TextBox
+            placeholder="Confirme a senha"
+            isPassword={true}
+            onChangeText={(texto) => setPassword2(texto)}
+            value={password2}
+          />
         </View>
 
         <View style={styles.form}>
-          <Button title="Próximo passo " />
+          <Button
+            title="Próximo passo"
+            onPress={() => props.navigation.navigate("register2")}
+          />
         </View>
       </View>
 
-      <View style={styles.footer}>
-        <TouchableOpacity onPress={() => console.log("Redirecionar para acesso de conta")}>
+      {/* <View style={styles.footer}>
+        <TouchableOpacity onPress={() => props.navigation.navigate("login")}>
           <Text style={styles.footerText}>Acesse sua conta</Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
     </View>
   );
 }
-
 export default Register;
