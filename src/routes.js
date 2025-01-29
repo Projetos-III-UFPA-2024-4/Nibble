@@ -12,6 +12,11 @@ function Routes() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
+          name="home"
+          component={Home}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="login"
           component={Login}
           options={{ headerShown: false }}
@@ -41,11 +46,6 @@ function Routes() {
               backgroundColor: "green", // Aqui você define a cor de fundo do header
             },
           }}
-        />
-        <Stack.Screen
-          name="home"
-          component={Home}
-          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

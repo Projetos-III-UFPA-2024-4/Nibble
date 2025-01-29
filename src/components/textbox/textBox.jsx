@@ -1,16 +1,14 @@
-import { TextInput } from "react-native";
-import { styles } from "./textBox.style.js";
-
+import { View, TextInput } from "react-native";
+import { styles } from "./textBox.js";
 
 function TextBox(props) {
   return (
-    <>
+    <View style={styles.input}>
       <TextInput
-        style={styles.input}
         placeholder={props.placeholder}
         secureTextEntry={props.isPassword}
       />
-    </>
+    </View>
   );
 }
 

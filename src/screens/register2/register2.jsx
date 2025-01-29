@@ -3,8 +3,9 @@ import { styles } from "./register2.style.js";
 import AppLoading from "expo-app-loading"; // Use SplashScreen se necessário
 import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import Header from "../../components/header/header.jsx";
-import TextBox from "../../components/textbox/textBox.jsx";
+import TextBoxLogin from "../../components/textboxlogin/textBoxLogin.jsx";
 import Button from "../../components/button/button.jsx";
+import { useState } from "react";
 
 function Register2(props) {
   const [address, setAddress] = useState("");
@@ -26,14 +27,14 @@ function Register2(props) {
       <View style={styles.formGroup}>
         <View style={styles.formHorizontal}>
           <View style={styles.form70}>
-            <TextBox
+            <TextBoxLogin
               placeholder="Endereço"
               onChangeText={(texto) => setAddress(texto)}
               value={address}
             />
           </View>
           <View style={styles.form30}>
-            <TextBox
+            <TextBoxLogin
               placeholder="Num."
               onChangeText={(texto) => setNumber(texto)}
               value={number}
@@ -41,7 +42,7 @@ function Register2(props) {
           </View>
         </View>
         <View style={styles.form}>
-          <TextBox
+          <TextBoxLogin
             placeholder="Bairro"
             onChangeText={(texto) => setDistrict(texto)}
             value={district}
@@ -50,14 +51,14 @@ function Register2(props) {
 
         <View style={styles.formHorizontal}>
           <View style={styles.form70}>
-            <TextBox
+            <TextBoxLogin
               placeholder="Cidade"
               onChangeText={(texto) => setCity(texto)}
               value={city}
             />
           </View>
           <View style={styles.form30}>
-            <TextBox
+            <TextBoxLogin
               placeholder="UF"
               onChangeText={(texto) => setState(texto)}
               value={state}
@@ -66,7 +67,7 @@ function Register2(props) {
         </View>
 
         <View style={styles.form}>
-          <TextBox
+          <TextBoxLogin
             placeholder="CEP"
             onChangeText={(texto) => setCep(texto)}
             value={cep}
@@ -74,7 +75,7 @@ function Register2(props) {
         </View>
 
         <View style={styles.form}>
-          <Button title="Criar minha conta " />
+          <Button title="Criar minha conta" onPress={() => props.navigation.navigate("home")}/>
         </View>
       </View>
 

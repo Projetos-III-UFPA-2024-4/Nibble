@@ -3,7 +3,7 @@ import { styles } from "./register.style.js";
 import AppLoading from "expo-app-loading";
 import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import Header from "../../components/header/header.jsx";
-import TextBox from "../../components/textbox/textBox.jsx";
+import TextBoxLogin from "../../components/textboxlogin/textBoxLogin.jsx";
 import Button from "../../components/button/button.jsx";
 import { useState } from "react";
 
@@ -24,7 +24,7 @@ function Register(props) {
       <Header texto="Crie sua conta" />
       <View style={styles.formGroup}>
         <View style={styles.form}>
-          <TextBox
+          <TextBoxLogin
             placeholder="Nome Completo"
             onChangeText={(texto) => setNome(texto)}
             value={nome}
@@ -32,7 +32,7 @@ function Register(props) {
         </View>
 
         <View style={styles.form}>
-          <TextBox
+          <TextBoxLogin
             placeholder="E-mail"
             onChangeText={(texto) => setEmail(texto)}
             value={email}
@@ -40,7 +40,7 @@ function Register(props) {
         </View>
 
         <View style={styles.form}>
-          <TextBox
+          <TextBoxLogin
             placeholder="Escolha uma senha"
             isPassword={true}
             onChangeText={(texto) => setPassword1(texto)}
@@ -49,7 +49,7 @@ function Register(props) {
         </View>
 
         <View style={styles.form}>
-          <TextBox
+          <TextBoxLogin
             placeholder="Confirme a senha"
             isPassword={true}
             onChangeText={(texto) => setPassword2(texto)}

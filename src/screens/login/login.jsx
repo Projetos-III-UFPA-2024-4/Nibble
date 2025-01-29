@@ -3,14 +3,13 @@ import { styles } from "./login.style.js";
 import AppLoading from "expo-app-loading"; // Use SplashScreen se necessário
 import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import Header from "../../components/header/header.jsx";
-import TextBox from "../../components/textbox/textBox.jsx";
+import TextBoxLogin from "../../components/textboxlogin/textBoxLogin.jsx";
 import Button from "../../components/button/button.jsx";
 import { useState } from "react";
 
 function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState();
-
 
   function ProcessLogin() {
     console.log("Acessando ...");
@@ -28,11 +27,11 @@ function Login(props) {
 
       <View style={styles.formGroup}>
         <View style={styles.form}>
-          <TextBox placeholder="E-mail" />
+          <TextBoxLogin placeholder="E-mail"/>
         </View>
 
         <View style={styles.form}>
-          <TextBox placeholder="Senha" isPassword={true} />
+          <TextBoxLogin placeholder="Senha" isPassword={true} />
         </View>
 
         <View style={styles.form}>

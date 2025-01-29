@@ -9,5 +9,6 @@ export const styles = {
     fontSize: 16, // Tamanho do texto
     color: "#000", // Cor do texto digitado
     textAlign: "center",
+    flexDirection:"row"
   },
 };
