@@ -37,14 +37,20 @@ export const styles = {
   categories: {
     flexDirection: "row",
     justifyContent: "space-between",
-    flexWrap: 'wrap',
-
+    flexWrap: "wrap",
+    marginTop: 30,
   },
   products: {
-    height: 120,
-    width: 120,
+    height: 110,
+    width: 110,
   },
   couple: {
     alignItems: "center",
   },
+  supermercados: {
+    marginTop: 30,
+    gap: 40, // Espaçamento automático entre as imagens (funciona só em RN 0.71+)
+  },
+  footer:{
+  }
 };

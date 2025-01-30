@@ -1,5 +1,5 @@
 import { View, TextInput } from "react-native";
-import { styles } from "./textBox.js";
+import { styles } from "./textBox.style.js";
 
 function TextBox(props) {
   return (

@@ -6,6 +6,10 @@ import { useFredokaFonts } from "../../assets/fonts/fontLoader";
 import AppLoading from "expo-app-loading";
 import TextBox from "../../components/textbox/textBox.jsx";
 import { useState } from "react";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const Tab = createBottomTabNavigator();
+
 
 function Home() {
   const [busca, setBusca] = useState("");
@@ -61,10 +65,13 @@ function Home() {
             <Text>Embalados</Text>
           </View>
         </View>
-        <View styles={styles.supermercados}>
-          <Image source={icons.formosa}/>
-          <Image source={icons.lider}/>
-          <Image source={icons.atacadao}/>
+        <View style={styles.supermercados}>
+          <Image style={{ height: 69, width: 100 }} source={icons.formosa} />
+          <Image style={{ height: 46.5, width: 150 }} source={icons.lider} />
+          <Image style={{ height: 45, width: 150 }} source={icons.atacadao} />
+        </View>
+        <View style={styles.footer}>
+          <Text>jdbfkjsd</Text>
         </View>
       </View>
     </SafeAreaView>
