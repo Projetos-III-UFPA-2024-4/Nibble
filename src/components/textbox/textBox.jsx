@@ -7,6 +7,8 @@ function TextBox(props) {
       <TextInput
         placeholder={props.placeholder}
         secureTextEntry={props.isPassword}
+        onChangeText={(texto) => props.onChangeText(texto)}
+        value={props.value}
       />
     </View>
   );

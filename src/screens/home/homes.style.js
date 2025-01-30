@@ -1,21 +1,20 @@
 export const styles = {
   container: {
     flex: 1,
-    alignItems: "center",
+    backgroundColor: "white",
   },
 
   header: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 15, // Ajuste para espaçamento interno
-    paddingTop:10
+    paddingHorizontal: 10,
+    paddingTop: 10,
   },
 
   titleContainer: {
-    flex: 1, // Ocupa todo o espaço disponível
-    alignItems: "center", // Centraliza o texto
-    // marginLeft: 30
+    flex: 1,
+    alignItems: "center",
   },
 
   titulo: {
@@ -23,12 +22,29 @@ export const styles = {
     fontFamily: "Fredoka-Medium",
     color: "#78c129",
     textAlign: "center",
-    marginLeft: 50
+    marginLeft: 50,
   },
-
   icon: {
     height: 35,
     width: 35,
-    opacity: 0.5
+    opacity: 0.5,
+  },
+  search: {
+    width: "100%",
+    paddingHorizontal: 20,
+    marginTop: 40,
+  },
+  categories: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    flexWrap: 'wrap',
+
+  },
+  products: {
+    height: 120,
+    width: 120,
+  },
+  couple: {
+    alignItems: "center",
   },
 };
