@@ -5,5 +5,6 @@ import fruits from "../assets/images/fruits.png";
 import lider from "../assets/images/lider.png";
 import drinks from "../assets/images/drinks.png";
 import chips from "../assets/images/chips.png";
+import formosa from "../assets/images/formosa.png";
 
-export default { logo, cart, atacadao, fruits, lider, drinks, chips };
+export default { logo, cart, atacadao, fruits, lider, drinks, chips, formosa };

@@ -1,6 +1,6 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./homes.style";
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import { Image, Text, TouchableOpacity, View, ScrollView } from "react-native";
 import icons from "../../constants/icons";
 import { useFredokaFonts } from "../../assets/fonts/fontLoader";
 import AppLoading from "expo-app-loading";
@@ -60,6 +60,11 @@ function Home() {
             <Image style={styles.products} source={icons.chips} />
             <Text>Embalados</Text>
           </View>
+        </View>
+        <View styles={styles.supermercados}>
+          <Image source={icons.formosa}/>
+          <Image source={icons.lider}/>
+          <Image source={icons.atacadao}/>
         </View>
       </View>
     </SafeAreaView>
