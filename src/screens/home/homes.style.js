@@ -33,12 +33,14 @@ export const styles = {
     width: "100%",
     paddingHorizontal: 20,
     marginTop: 40,
+    marginBottom: 5
   },
   categories: {
     flexDirection: "row",
     justifyContent: "space-between",
     flexWrap: "wrap",
     marginTop: 30,
+    marginBottom: 20,
   },
   products: {
     height: 110,
