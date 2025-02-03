@@ -17,4 +17,16 @@ export const supermarkets = [
     endereco: "Rod. Bernardo Sayão, 1250",
     logotipo: require("../assets/images/atacadao.png"),
   },
+  {
+    id: 4,
+    nome:"Assaí Atacadista",
+    endereco:"Rod. Mário Covas, 69",
+    logotipo: require("../assets/images/assai.png")
+  },
+  {
+    id: 5,
+    nome:"Mix Mateus Atacarejo",
+    endereco:"Av. Dr. Freitas, 1228",
+    logotipo: require("../assets/images/mixmateus.png")
+  },
 ];

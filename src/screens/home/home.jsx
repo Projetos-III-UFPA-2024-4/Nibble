@@ -54,18 +54,6 @@ function Home() {
             <Image style={styles.products} source={icons.chips} />
             <Text>Embalados</Text>
           </View>
-          <View style={styles.couple}>
-            <Image style={styles.products} source={icons.fruits} />
-            <Text>Frutas</Text>
-          </View>
-          <View style={styles.couple}>
-            <Image style={styles.products} source={icons.drinks} />
-            <Text>Bebidas</Text>
-          </View>
-          <View style={styles.couple}>
-            <Image style={styles.products} source={icons.chips} />
-            <Text>Embalados</Text>
-          </View>
         </View>
 
         {supermarkets.map((supermarket, index) => {
