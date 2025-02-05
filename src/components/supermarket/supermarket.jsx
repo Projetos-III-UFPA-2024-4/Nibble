@@ -18,7 +18,7 @@ function Supermarket(props) {
         <Text style={styles.endereco}>{props.endereco}</Text>
       </View>
       <TouchableOpacity>
-        <Image source={icons.favorito_full} style={styles.favorito} />
+        <Image source={props.icone} style={styles.favorito} />
       </TouchableOpacity>
     </View>
   );

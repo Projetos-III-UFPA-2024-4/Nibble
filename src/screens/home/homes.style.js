@@ -41,6 +41,7 @@ export const styles = {
     flexWrap: "wrap",
     marginTop: 30,
     marginBottom: 20,
+    paddingLeft:20
   },
   products: {
     height: 110,

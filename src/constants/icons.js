@@ -14,6 +14,8 @@ import endereco from "../assets/images/endereco.png";
 import favorito_full from "../assets/images/favorito-full.png";
 import favorito_full2 from "../assets/images/favorito-full2.png";
 import favorito from "../assets/images/favorito.png";
+import deletar from "../assets/images/deletar.png";
+import empty from "../assets/images/empty.png";
 
 export default {
   logo,
@@ -32,4 +34,6 @@ export default {
   favorito,
   favorito_full,
   favorito_full2,
+  deletar,
+  empty
 };

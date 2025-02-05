@@ -14,19 +14,31 @@ export const supermarkets = [
   {
     id: 3,
     nome: "Atacadão",
-    endereco: "Rod. Bernardo Sayão, 1250",
+    endereco: "Rodovia Bernardo Sayão, 1250",
     logotipo: require("../assets/images/atacadao.png"),
   },
   {
     id: 4,
     nome:"Assaí Atacadista",
-    endereco:"Rod. Mário Covas, 69",
+    endereco:"Rodovia Mário Covas, 69",
     logotipo: require("../assets/images/assai.png")
   },
   {
     id: 5,
     nome:"Mix Mateus Atacarejo",
-    endereco:"Av. Dr. Freitas, 1228",
+    endereco:"Avenida Dr. Freitas, 1228",
     logotipo: require("../assets/images/mixmateus.png")
+  },
+  {
+    id: 6,
+    nome:"Econômico Meio a Meio",
+    endereco:"Rua Engenheiro Fernando Guilhon, 962",
+    logotipo: require("../assets/images/economico.png")
+  },
+  {
+    id: 7,
+    nome:"Preço Baixo Meio a Meio",
+    endereco:"Avenida Senador Lemos, 2842",
+    logotipo: require("../assets/images/preco_baixo.png")
   },
 ];

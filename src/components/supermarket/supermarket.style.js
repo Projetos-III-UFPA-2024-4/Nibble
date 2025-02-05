@@ -38,8 +38,8 @@ export const styles = {
       color: "#666",
     },
     favorito: {
-      width: 24,
-      height: 24,
+      width: 30,
+      height: 30,
     },
   };
   

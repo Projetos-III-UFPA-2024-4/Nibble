@@ -47,11 +47,15 @@ function Home() {
             <Text>Frutas</Text>
           </View>
           <View style={styles.couple}>
-            <Image style={styles.products} source={icons.drinks} />
+            <TouchableOpacity>
+              <Image style={styles.products} source={icons.drinks} />
+            </TouchableOpacity>
             <Text>Bebidas</Text>
           </View>
           <View style={styles.couple}>
-            <Image style={styles.products} source={icons.chips} />
+            <TouchableOpacity>
+              <Image style={styles.products} source={icons.chips} />
+            </TouchableOpacity>
             <Text>Embalados</Text>
           </View>
         </View>
@@ -63,6 +67,7 @@ function Home() {
                 logotipo={supermarket.logotipo}
                 nome={supermarket.nome}
                 endereco={supermarket.endereco}
+                icone={icons.favorito_full2}
               />
             </View>
           );
