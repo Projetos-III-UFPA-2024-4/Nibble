@@ -52,8 +52,6 @@ export const styles = {
   },
   supermercados: {
     marginTop: 30,
-    gap: 40, // Espaçamento automático entre as imagens (funciona só em RN 0.71+)
+    gap: 40, 
   },
-  footer:{
-  }
 };

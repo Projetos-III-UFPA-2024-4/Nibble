@@ -46,8 +46,8 @@ export const supermarkets = [
 export const pedidos = [
   {
     id: 1,
-    nome: "Churrascaria e Pizzaria Boizão",
-    endereco: "Alameda Santos, 954",
+    nome: "Supermercado Líder",
+    endereco: "Rodovia BR-316, km 2",
     status: "Entregue",
     dt_pedido: "10/05/2024",
     vl_total: 149,
@@ -55,8 +55,8 @@ export const pedidos = [
   },
   {
     id: 2,
-    nome: "The Keba’s Bar",
-    endereco: "Rua Rui Barbosa, 512",
+    nome: "Atacadão",
+    endereco: "Rodovia Bernardo Sayão, 1250",
     status: "Entregue",
     dt_pedido: "10/05/2024",
     vl_total: 52,
@@ -64,8 +64,8 @@ export const pedidos = [
   },
   {
     id: 3,
-    nome: "Churrascaria e Pizzaria Boizão",
-    endereco: "Alameda Santos, 954",
+    nome: "Preço Baixo Meio a Meio",
+    endereco: "Avenida Senador Lemos, 2842",
     status: "Entregue",
     dt_pedido: "10/05/2024",
     vl_total: 71,
