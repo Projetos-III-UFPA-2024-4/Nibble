@@ -14,9 +14,9 @@ function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
-          name="profile"
-          component={Profile}
+        {/* <Stack.Screen
+          name="home"
+          component={Home}
           options={{ headerShown: false }}
         />
         <Stack.Screen
@@ -25,15 +25,15 @@ function Routes() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="home"
-          component={Home}
+          name="profile"
+          component={Profile}
           options={{ headerShown: false }}
         />
         <Stack.Screen
           name="favorites"
           component={Favorites}
           options={{ headerShown: false }}
-        />
+        /> */}
         <Stack.Screen
           name="login"
           component={Login}
