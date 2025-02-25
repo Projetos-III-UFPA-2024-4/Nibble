@@ -3,10 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Register from "./screens/register/register";
 import Register2 from "./screens/register2/register2";
-import Home from "./screens/home/home";
-import Favorites from "./screens/favorites/favorites";
-import Orders from "./screens/orders/orders";
-import Profile from "./screens/profile/profile";
+import Search from "./screens/search/search";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,29 +11,14 @@ function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen
-          name="home"
-          component={Home}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="orders"
-          component={Orders}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="profile"
-          component={Profile}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="favorites"
-          component={Favorites}
-          options={{ headerShown: false }}
-        /> */}
         <Stack.Screen
           name="login"
           component={Login}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="search"
+          component={Search}
           options={{ headerShown: false }}
         />
         <Stack.Screen

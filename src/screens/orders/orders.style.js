@@ -1,7 +1,7 @@
 export const styles = {
     container: {
       flex: 1,
-      backgrounColor: "white",
+      backgroundColor: "white",
       padding: 12
     },
     title: {

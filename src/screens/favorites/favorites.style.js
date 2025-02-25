@@ -1,26 +1,26 @@
 export const styles = {
   container: {
     flex: 1,
-    backgrounColor: "white",
-    padding: 12
+    backgroundColor: "white",
+    padding: 12,
   },
   title: {
     fontSize: 30,
     fontFamily: "Fredoka-Medium",
     color: "#78c129",
     textAlign: "center",
-    marginBottom: 20
+    marginBottom: 20,
   },
-  containerList:{
-    flexGrow: 1
+  containerList: {
+    flexGrow: 1,
   },
-  empty:{
+  empty: {
     flex: 1,
-    alignItems:"center",
-    justifyContent:"center",
-    paddingBottom: 60
+    alignItems: "center",
+    justifyContent: "center",
+    paddingBottom: 60,
   },
-  emptyText:{
-color:"#5D6275"
-  }
+  emptyText: {
+    color: "#5D6275",
+  },
 };

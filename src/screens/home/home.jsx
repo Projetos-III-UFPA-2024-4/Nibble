@@ -63,12 +63,14 @@ function Home() {
         {supermarkets.map((supermarket, index) => {
           return (
             <View key={index}>
+              <TouchableOpacity>
               <Supermarket
                 logotipo={supermarket.logotipo}
                 nome={supermarket.nome}
                 endereco={supermarket.endereco}
                 icone={icons.favorito_full2}
               />
+              </TouchableOpacity>
             </View>
           );
         })}
