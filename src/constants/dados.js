@@ -72,3 +72,35 @@ export const pedidos = [
     logotipo: require("../assets/images/preco_baixo.png"),
   },
 ];
+
+export const supermarket = {
+  id: 1,
+  nome: "Preço Baixo Meio a Meio",
+  endereco: "Avenida Senador Lemos, 2842",
+  logotipo: require("../assets/images/preco_baixo.png"),
+  foto: require("../assets/images/meio_a_meio_real.png"),
+  vlEntrega: 5.00,
+  isFavorito: true,
+  cardapio: [
+      {
+          idCategoria: 1,
+          categoria: "Ofertas",
+          itens: [
+              {
+                  idProduto: 1,
+                  nome: "Pizza Calabresa",
+                  descricao: "Massa artesanal, mussarela e calabresa",
+                  valor: 30.00,
+                  foto: require("../assets/images/produto-pizza.png")
+              },
+              {
+                  idProduto: 2,
+                  nome: "Coca-Cola Lata",
+                  descricao: "Coca-Cola lata de 300ml trincando de gelada",
+                  valor: 5.00,
+                  foto: require("../assets/images/produto-coca.png")
+              }
+          ]
+      },
+  ]
+};
