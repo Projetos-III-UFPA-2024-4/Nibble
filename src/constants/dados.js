@@ -81,7 +81,7 @@ export const supermarket = {
   foto: require("../assets/images/meio_a_meio_real.png"),
   vlEntrega: 5.00,
   isFavorito: true,
-  cardapio: [
+  produtos: [
       {
           idCategoria: 1,
           categoria: "Ofertas",
@@ -91,16 +91,36 @@ export const supermarket = {
                   nome: "Pizza Calabresa",
                   descricao: "Massa artesanal, mussarela e calabresa",
                   valor: 30.00,
-                  foto: require("../assets/images/produto-pizza.png")
+                  foto: require("../assets/images/produto_pizza.png")
               },
               {
                   idProduto: 2,
                   nome: "Coca-Cola Lata",
                   descricao: "Coca-Cola lata de 300ml trincando de gelada",
                   valor: 5.00,
-                  foto: require("../assets/images/produto-coca.png")
+                  foto: require("../assets/images/produto_coca.png")
               }
           ]
-      },
+      },{
+            idCategoria: 2,
+            categoria: "Mais Pedidos",
+            itens: [
+                {
+                    idProduto: 3,
+                    nome: "Pizza Mussarela",
+                    descricao: "Massa artesanal, mussarela e calabresa",
+                    valor: 30.00,
+                    foto: require("../assets/images/produto_pizza.png")
+                },
+                {
+                    idProduto: 4,
+                    nome: "Coca-Cola Litro",
+                    descricao: "Coca-Cola lata de 300ml trincando de gelada",
+                    valor: 5.00,
+                    foto: require("../assets/images/produto_coca.png")
+                }
+            ]
+        }
+
   ]
 };
