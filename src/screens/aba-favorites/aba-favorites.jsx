@@ -2,10 +2,10 @@ import { FlatList, Image, Text, View } from "react-native";
 import { supermarkets } from "../../constants/dados";
 import Supermarket from "../../components/supermarket/supermarket";
 import icons from "../../constants/icons";
-import { styles } from "./favorites.style";
+import { styles } from "./aba-favorites.style.js";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-function Favorites() {
+function AbaFavorites() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Favoritos</Text>
@@ -28,4 +28,4 @@ function Favorites() {
   );
 }
 
-export default Favorites;
+export default AbaFavorites;

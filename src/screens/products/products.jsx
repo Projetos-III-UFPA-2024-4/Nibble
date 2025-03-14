@@ -1,4 +1,4 @@
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./products.style";
 import { supermarket } from "../../constants/dados";
 import icons from "../../constants/icons.js";
@@ -23,7 +23,6 @@ function Products() {
           <Text style={styles.nome}>Nome do estabelecimento</Text>
           <Text style={styles.taxa}>Taxa de entrega: R$ 5,00</Text>
         </View>
-
         <Image source={icons.favorito_full} style={styles.favorito} />
       </View>
 
@@ -31,27 +30,28 @@ function Products() {
         <Image source={icons.location} style={styles.locationImg} />
         <Text style={styles.endereco}>Avenida Senador Lemos, 2842</Text>
       </View>
+      <ScrollView>
+        {supermarket.produtos.map((item) => {
+          return (
+            <View key={item.idCategoria} style={styles.containerProduto}>
+              <Text style={styles.categoria}>{item.categoria}</Text>
 
-      {supermarket.produtos.map((item) => {
-        return (
-          <View key={item.idCategoria} style={styles.containerProduto}>
-            <Text style={styles.categoria}>{item.categoria}</Text>
-
-            {item.itens.map((prod) => {
-              return (
-                <Product
-                  key={prod.idProduto}
-                  idProduto={prod.idProduto}
-                  foto={prod.foto}
-                  nome={prod.nome}
-                  descricao={prod.descricao}
-                  valor={prod.valor}
-                />
-              );
-            })}
-          </View>
-        );
-      })}
+              {item.itens.map((prod) => {
+                return (
+                  <Product
+                    key={prod.idProduto}
+                    idProduto={prod.idProduto}
+                    foto={prod.foto}
+                    nome={prod.nome}
+                    descricao={prod.descricao}
+                    valor={prod.valor}
+                  />
+                );
+              })}
+            </View>
+          );
+        })}
+      </ScrollView>
     </View>
   );
 }

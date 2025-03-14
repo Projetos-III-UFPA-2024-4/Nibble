@@ -1,8 +1,8 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import { styles } from "./homes.style";
+import { styles } from "./aba-homes.style.js";
 import { Image, Text, TouchableOpacity, View, ScrollView } from "react-native";
-import icons from "../../constants/icons";
-import { useFredokaFonts } from "../../assets/fonts/fontLoader";
+import icons from "../../constants/icons.js";
+import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import AppLoading from "expo-app-loading";
 import TextBox from "../../components/textbox/textBox.jsx";
 import { useState } from "react";
@@ -12,7 +12,7 @@ import Supermarket from "../../components/supermarket/supermarket.jsx";
 
 const Tab = createBottomTabNavigator();
 
-function Home() {
+function AbaHome() {
   const [busca, setBusca] = useState("");
 
   const fontsLoaded = useFredokaFonts();
@@ -78,4 +78,4 @@ function Home() {
     </SafeAreaView>
   );
 }
-export default Home;
+export default AbaHome;

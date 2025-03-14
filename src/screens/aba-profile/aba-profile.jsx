@@ -1,11 +1,11 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
-import { styles } from "./profile.style.js";
+import { styles } from "./aba-profile.style.js";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import AppLoading from "expo-app-loading";
 import icons from "../../constants/icons.js";
 
-function Profile() {
+function AbaProfile() {
   const fontsLoaded = useFredokaFonts();
 
   if (!fontsLoaded) {
@@ -66,4 +66,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default AbaProfile;

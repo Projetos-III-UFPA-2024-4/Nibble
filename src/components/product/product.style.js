@@ -25,5 +25,6 @@ export const styles = {
   valor: {
     color: "#5D6275",
     fontSize: 14,
+    marginTop: 8
   },
 };

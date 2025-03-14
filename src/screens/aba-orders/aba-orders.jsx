@@ -2,12 +2,12 @@ import { FlatList, Image, Text, View } from "react-native";
 import { pedidos } from "../../constants/dados.js";
 import Order from "../../components/order/order.jsx";
 import icons from "../../constants/icons.js";
-import { styles } from "./orders.style.js";
+import { styles } from "./aba-orders.style.js";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import AppLoading from "expo-app-loading";
 
-function Orders() {
+function AbaOrders() {
   const fontsLoaded = useFredokaFonts();
 
   if (!fontsLoaded) {
@@ -45,4 +45,4 @@ function Orders() {
   );
 }
 
-export default Orders;
+export default AbaOrders;
