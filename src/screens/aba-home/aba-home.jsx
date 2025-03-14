@@ -6,13 +6,15 @@ import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import AppLoading from "expo-app-loading";
 import TextBox from "../../components/textbox/textBox.jsx";
 import { useState } from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { supermarkets } from "../../constants/dados.js";
 import Supermarket from "../../components/supermarket/supermarket.jsx";
 
-const Tab = createBottomTabNavigator();
+function AbaHome(props) {
 
-function AbaHome() {
+  function OpenProducts(){
+    props.navigation.navigate("products")
+  }
+
   const [busca, setBusca] = useState("");
 
   const fontsLoaded = useFredokaFonts();
@@ -69,6 +71,7 @@ function AbaHome() {
                 nome={supermarket.nome}
                 endereco={supermarket.endereco}
                 icone={icons.favorito_full2}
+                onPress={OpenProducts}
               />
               </TouchableOpacity>
             </View>

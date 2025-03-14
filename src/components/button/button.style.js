@@ -1,5 +1,5 @@
 export const styles = {
-  btn: {
+  btn1: {
     width: "70%",
     height: 50,
     backgroundColor: "white", // Cor de fundo branca
@@ -10,8 +10,19 @@ export const styles = {
     alignItems: "center", // Centraliza o texto horizontalmente
     marginTop: 0,
   },
-  texto: {
+  texto1: {
     color: "black", // Define a cor do texto como preto para contraste
     fontWeight: "bold", // Deixa o texto em negrito (opcional)
+  },
+  btn2: {
+    width: "100%",
+    backgroundColor: "#78c129", // red
+    borderRadius: 6,
+  },
+  texto2: {
+    fontSize: 16, // FONT_SIZE.md
+    color: "white",
+    padding: 14,
+    textAlign: "center",
   },
 };

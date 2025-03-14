@@ -4,7 +4,7 @@ import { styles } from "./supermarket.style";
 
 function Supermarket(props) {
   return (
-    <View style={styles.supermarket}>
+    <TouchableOpacity style={styles.supermarket} onPress={() => props.onPress()}>
       <View style={styles.logoContainer}>
         <Image
           source={props.logotipo}
@@ -20,7 +20,7 @@ function Supermarket(props) {
       <TouchableOpacity>
         <Image source={props.icone} style={styles.favorito} />
       </TouchableOpacity>
-    </View>
+    </TouchableOpacity>
   );
 }
 

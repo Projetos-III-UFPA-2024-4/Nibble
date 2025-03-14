@@ -1,3 +1,4 @@
+import { Image } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import icons from "../../constants/icons";
 import AbaHome from "../aba-home/aba-home";
@@ -8,8 +9,7 @@ import AbaProfile from "../aba-profile/aba-profile";
 const Tab = createBottomTabNavigator();
 
 function Principal() {
-  return (
-    <Tab.Navigator
+  return <Tab.Navigator
       screenOptions={{
         tabBarShowLabel: false,
         tabBarStyle: { backgroundColor: "#78c129" },
@@ -96,6 +96,5 @@ function Principal() {
         }}
       />
     </Tab.Navigator>
-  );
 }
 export default Principal;

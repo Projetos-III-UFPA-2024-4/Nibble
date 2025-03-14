@@ -4,9 +4,10 @@ import { supermarket } from "../../constants/dados";
 import icons from "../../constants/icons.js";
 import Product from "../../components/product/product.jsx";
 
-function Products() {
+function Products(props) {
   return (
     <View style={styles.container}>
+        <ScrollView>
       <View style={styles.containerFoto}>
         <Image
           source={supermarket.foto}
@@ -14,7 +15,7 @@ function Products() {
           resizeMode="container"
         />
       </View>
-      <TouchableOpacity style={styles.containerBack}>
+      <TouchableOpacity style={styles.containerBack} onPress={props.navigation.goBack}>
         <Image source={icons.back2} style={styles.back} />
       </TouchableOpacity>
 
@@ -30,7 +31,6 @@ function Products() {
         <Image source={icons.location} style={styles.locationImg} />
         <Text style={styles.endereco}>Avenida Senador Lemos, 2842</Text>
       </View>
-      <ScrollView>
         {supermarket.produtos.map((item) => {
           return (
             <View key={item.idCategoria} style={styles.containerProduto}>
