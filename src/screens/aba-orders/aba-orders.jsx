@@ -7,7 +7,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import AppLoading from "expo-app-loading";
 
-function AbaOrders() {
+function AbaOrders(props) {
+
+  function DetalhePedido(){
+    props.navigation.navigate("detalhe-pedido")
+  }
   const fontsLoaded = useFredokaFonts();
 
   if (!fontsLoaded) {
@@ -28,6 +32,7 @@ function AbaOrders() {
               value={item.vl_total}
               date_order={item.dt_pedido}
               status={item.status}
+              onClickPedido={DetalhePedido}
             />
           );
         }}

@@ -29,7 +29,9 @@ function AbaHome(props) {
         <View style={styles.titleContainer}>
           <Text style={styles.titulo}>ReFood</Text>
         </View>
+        <TouchableOpacity onPress={() => props.navigation.navigate("checkout")}>
         <Image source={icons.cart} style={styles.icon} />
+        </TouchableOpacity>
       </View>
 
       <View style={styles.search}>

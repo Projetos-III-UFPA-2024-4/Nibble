@@ -5,6 +5,8 @@ import Products from "./screens/products/products.jsx";
 import Search from "./screens/search/search.jsx";
 import DetalheProduto from "./screens/detalhe-produto/detalheProduto.jsx";
 import DetalhePedido from "./screens/detalhe-pedido/detalhePedido.jsx";
+import Checkout from "./screens/checkout/checkout.jsx";
+import { Text, TouchableOpacity } from "react-native";
 
 const Stack = createNativeStackNavigator();
 
@@ -13,22 +15,40 @@ function RoutesAuth() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
+          name="principal"
+          component={Principal}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="checkout"
+          component={Checkout}
+          options={{
+            headerShadowVisible: false,
+            title: "Meu pedido",
+            headerTitleAlign: "center",
+            headerRight: () => {
+              return (
+                <TouchableOpacity onPress={() => alert("ok")}>
+                  <Text style={{ color: "red" }}>Limpar</Text>
+                </TouchableOpacity>
+              );
+            },
+          }}
+        />
+        <Stack.Screen
           name="detalhe-pedido"
           component={DetalhePedido}
           options={{
-            headerShown: false,
+            headerShadowVisible: false,
+            title: "Detalhes do Pedido",
+            headerTitleAlign: "center",
           }}
         />
         <Stack.Screen
           name="detalhe-produto"
           component={DetalheProduto}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name="principal"
-          component={Principal}
           options={{
             headerShown: false,
           }}

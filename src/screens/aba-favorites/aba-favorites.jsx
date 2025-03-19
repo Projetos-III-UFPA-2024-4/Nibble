@@ -5,7 +5,7 @@ import icons from "../../constants/icons";
 import { styles } from "./aba-favorites.style.js";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-function AbaFavorites() {
+function AbaFavorites(props) {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Favoritos</Text>
@@ -14,7 +14,7 @@ function AbaFavorites() {
         keyExtractor={(supermarkets) => supermarkets.id}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => {
-          return <Supermarket nome={item.nome} endereco={item.endereco} logotipo={item.logotipo} icone={icons.deletar} />;
+          return <Supermarket nome={item.nome} endereco={item.endereco} logotipo={item.logotipo} icone={icons.favorito_full2}/>;
         }}
         contentContainerStyle={styles.containerList}
         ListEmptyComponent={() => {

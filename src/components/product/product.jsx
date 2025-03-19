@@ -1,5 +1,6 @@
 import { View, TouchableOpacity, Image, Text } from "react-native";
 import { styles } from "./product.style.js";
+import icons from "../../constants/icons.js";
 
 function Product(props) {
   return (
@@ -18,9 +19,20 @@ function Product(props) {
             currency: "BRL",
           }).format(props.valor)}
         </Text>
+
+        {
+                props.onClickDelete &&
+                <TouchableOpacity style={styles.containerDelete}
+                    onPress={() => props.onClickDelete()}>
+                    <Image source={icons.deletar} style={styles.delete} />
+                </TouchableOpacity>
+            }
+
       </View>
     </TouchableOpacity>
-  );
+  
+
+);
 }
 
 export default Product;

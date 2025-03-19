@@ -1,30 +1,38 @@
 export const styles = {
   produto: {
-    width: "100%",
-    flexDirection: "row",
-    marginBottom: 10,
-    marginTop: 10,
+      width: "100%",
+      flexDirection: "row",
+      marginBottom: 10,
+      marginTop: 10
   },
   foto: {
-    height: 80,
-    width: 80,
-    borderRadius: 6,
+      width: 80,
+      height: 80,
+      borderRadius: 6
   },
   textos: {
-    flex: 1,
-    padding: 8,
+      flex: 1,
+      padding: 8
   },
   nome: {
-    color: "#5D6275",
-    fontSize: 14,
+      color: "#5D6275",  // Cor cinza escuro
+      fontSize: 14  // Tamanho de fonte 14 (sm)
   },
   descricao: {
-    color: "#A6ABBC",
-    fontSize: 14,
+      color: "#A6ABBC",  // Cor cinza médio
+      fontSize: 14  // Tamanho de fonte 14 (sm)
   },
   valor: {
-    color: "#5D6275",
-    fontSize: 14,
-    marginTop: 8
+      color: "#5D6275",  // Cor cinza escuro
+      fontSize: 14,  // Tamanho de fonte 14 (sm)
+      marginTop: 8
   },
-};
+  delete: {
+      width: 28,
+      height: 28
+  },
+  containerDelete: {
+      alignItems: "flex-end",
+      marginTop: 8
+  }
+}
