@@ -8,6 +8,8 @@ import TextBox from "../../components/textbox/textBox.jsx";
 import { useState } from "react";
 import { supermarkets } from "../../constants/dados.js";
 import Supermarket from "../../components/supermarket/supermarket.jsx";
+import Categorias from "../../components/categorias/categorias.jsx";
+import { categorias } from "../../constants/dados.js";
 
 function AbaHome(props) {
 
@@ -43,26 +45,7 @@ function AbaHome(props) {
       </View>
 
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={styles.categories}>
-          <View style={styles.couple}>
-            <TouchableOpacity>
-              <Image style={styles.products} source={icons.fruits} />
-            </TouchableOpacity>
-            <Text>Frutas</Text>
-          </View>
-          <View style={styles.couple}>
-            <TouchableOpacity>
-              <Image style={styles.products} source={icons.drinks} />
-            </TouchableOpacity>
-            <Text>Bebidas</Text>
-          </View>
-          <View style={styles.couple}>
-            <TouchableOpacity>
-              <Image style={styles.products} source={icons.chips} />
-            </TouchableOpacity>
-            <Text>Embalados</Text>
-          </View>
-        </View>
+      <Categorias dados={categorias} />
 
         {supermarkets.map((supermarket, index) => {
           return (
