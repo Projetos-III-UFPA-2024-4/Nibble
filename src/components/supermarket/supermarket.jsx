@@ -4,7 +4,7 @@ import { styles } from "./supermarket.style";
 
 function Supermarket(props) {
   return (
-    <TouchableOpacity style={styles.supermarket}>
+    <TouchableOpacity style={styles.supermarket} onPress={props.onPress}>
       <View style={styles.logoContainer}>
         <Image
           source={props.logotipo}
