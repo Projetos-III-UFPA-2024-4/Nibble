@@ -1,5 +1,5 @@
 import Routes from "./src/routes.js";
-import RoutesAuth from "./src/routesAuth.js";
+import { AuthProvider } from "./src/contexts/auth.js";
 // import { View } from "react-native";
 // import Login from "./src/screens/login/login.jsx";
 // import Register from "./src/screens/register/register.jsx";
@@ -8,5 +8,7 @@ import RoutesAuth from "./src/routesAuth.js";
 const isUserAuth = true;
 
 export default function App() {
-  return isUserAuth ? <RoutesAuth /> : <Routes />;
+  return <AuthProvider>
+    <Routes />
+  </AuthProvider>
 }

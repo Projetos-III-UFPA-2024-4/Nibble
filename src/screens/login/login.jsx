@@ -1,19 +1,57 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Alert } from "react-native";
 import { styles } from "./login.style.js";
 import AppLoading from "expo-app-loading"; // Use SplashScreen se necessário
 import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import Header from "../../components/header/header.jsx";
 import TextBoxLogin from "../../components/textboxlogin/textBoxLogin.jsx";
 import Button from "../../components/button/button.jsx";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import api from "../../constants/api.js";
+import { SaveUsuario, LoadUsuario } from "../../storage/storage.usuario.js";
+import { AuthContext } from "../../contexts/auth.js";
 
 function Login(props) {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState();
+  const [password, setPassword] = useState(""); // Alterado de senha para password
+  const [loading, setLoading] = useState(false);
 
-  function ProcessLogin() {
-    console.log("Acessando ...");
+  const {user, setUser} = useContext(AuthContext);
+
+  async function ProcessLogin() {
+    try {
+      setLoading(true);
+      const response = await api.post("/usuarios/login", { email, senha: password });
+
+      if(response.data){
+        api.defaults.headers.common['Authorization'] = "Bearer " + response.data.token;
+        await SaveUsuario(response.data);
+        setUser(response.data);
+      }
+    } catch (error) {
+      setLoading(false);
+      await SaveUsuario({});
+      if (error.response?.data.error)
+        Alert.alert(error.response.data.error);
+      else
+        Alert.alert("Ocorreu um erro. Tente novamente mais tarde");
+    }
   }
+
+  async function CarregarDados() {
+    try {
+      const usuario = await LoadUsuario();
+      if(usuario.token){
+        api.defaults.headers.common['Authorization'] = "Bearer " + usuario.token;
+        setUser(usuario);
+      }
+    } catch (error) {
+      
+    }
+  }
+
+  useEffect(() => {
+    CarregarDados();
+  }, []);
 
   const fontsLoaded = useFredokaFonts();
 
@@ -27,15 +65,19 @@ function Login(props) {
 
       <View style={styles.formGroup}>
         <View style={styles.form}>
-          <TextBoxLogin placeholder="E-mail"/>
+          <TextBoxLogin placeholder="E-mail"
+            onChangeText={(texto) => setEmail(texto)}
+            value={email} />
         </View>
 
         <View style={styles.form}>
-          <TextBoxLogin placeholder="Senha" isPassword={true} />
+          <TextBoxLogin placeholder="Senha" isPassword={true}
+            onChangeText={(texto) => setPassword(texto)}
+            value={password} />
         </View>
 
         <View style={styles.form}>
-          <Button title="Entrar" onPress={ProcessLogin} />
+          <Button title="Entrar" onPress={ProcessLogin} isLoading={loading}/>
         </View>
       </View>
 

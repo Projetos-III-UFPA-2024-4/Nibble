@@ -14,4 +14,8 @@ export const styles = {
     color: "black", // Define a cor do texto como preto para contraste
     fontWeight: "bold", // Deixa o texto em negrito (opcional)
   },
+  loading: {
+    opacity: 0.5
+  },
+  loadingColor: "#ffffff"
 };

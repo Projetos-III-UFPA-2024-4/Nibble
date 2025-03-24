@@ -5,15 +5,38 @@ import icons from "../../constants/icons";
 import { useFredokaFonts } from "../../assets/fonts/fontLoader";
 import AppLoading from "expo-app-loading";
 import TextBox from "../../components/textbox/textBox.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { supermarkets } from "../../constants/dados.js";
 import Supermarket from "../../components/supermarket/supermarket.jsx";
+import api from "../../constants/api.js";
 
 const Tab = createBottomTabNavigator();
 
 function Home() {
+
+  async function LoadCategory() {
+    try {
+      setLoading(true);
+      const response = await api.get("/categorias");
+
+      if(response.data){
+
+      }
+    } catch (error) {
+      if (error.response?.data.error)
+        Alert.alert(error.response.data.error);
+      else
+        Alert.alert("Ocorreu um erro. Tente novamente mais tarde");
+    }
+  }
+
   const [busca, setBusca] = useState("");
+  const [categorias, setCategorias] = useState([]);
+
+  useEffect(() => {
+    LoadCategory();
+  }, []);
 
   const fontsLoaded = useFredokaFonts();
 
