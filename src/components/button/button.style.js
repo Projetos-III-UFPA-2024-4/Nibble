@@ -25,4 +25,8 @@ export const styles = {
     padding: 14,
     textAlign: "center",
   },
+  loading: {
+    opacity: 0.5
+  },
+  loadingColor: "#ffffff"
 };

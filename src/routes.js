@@ -6,78 +6,16 @@ import Register2 from "./screens/register2/register2";
 import LoginEcoseller from "./screens/login-ecoseller/loginEcoseller";
 import RegisterEcoseller from "./screens/register-ecoseller/registerEcoseller";
 import Register2Ecoseller from "./screens/register2-ecoseller/register2Ecoseller";
+import RoutesOpen from "./routesOpen.js";
+import RoutesAuth from "./routesAuth.js";
+import { useContext } from "react";
+import { AuthContext } from "./contexts/auth.js";
 
-const Stack = createNativeStackNavigator();
+function Routes(){
 
-function Routes() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="login"
-          component={Login}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="register"
-          component={Register}
-          options={{
-            // headerShown: false
-            headerShadowVisible: false,
-            title: "",
-            headerBackTitle: "Voltar",
-            headerStyle: {
-              backgroundColor: "green", // Aqui você define a cor de fundo do header
-            },
-          }}
-        />
-        <Stack.Screen
-          name="register2"
-          component={Register2}
-          options={{
-            // headerShown: false
-            title: "",
-            headerShadowVisible: false,
-            headerBackTitle: "Voltar",
-            headerStyle: {
-              backgroundColor: "green",
-            },
-          }}
-        />
-        <Stack.Screen
-          name="login-ecoseller"
-          component={LoginEcoseller}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="register-ecoseller"
-          component={RegisterEcoseller}
-          options={{
-            // headerShown: false
-            headerShadowVisible: false,
-            title: "",
-            headerBackTitle: "Voltar",
-            headerStyle: {
-              backgroundColor: "green", // Aqui você define a cor de fundo do header
-            },
-          }}
-        />
-        <Stack.Screen
-          name="register2-ecoseller"
-          component={Register2Ecoseller}
-          options={{
-            // headerShown: false
-            headerShadowVisible: false,
-            title: "",
-            headerBackTitle: "Voltar",
-            headerStyle: {
-              backgroundColor: "green", // Aqui você define a cor de fundo do header
-            },
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+    const {user} = useContext(AuthContext);
+
+    return  user.id_usuario ? <RoutesAuth /> : <RoutesOpen />
 }
 
 export default Routes;

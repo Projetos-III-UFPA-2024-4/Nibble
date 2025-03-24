@@ -10,8 +10,8 @@ import { useState } from "react";
 function Register(props) {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState();
-  const [password1, setPassword1] = useState();
-  const [password2, setPassword2] = useState();
+  const [password1, setPassword1] = useState("");
+  const [password2, setPassword2] = useState("");
 
   const fontsLoaded = useFredokaFonts();
 
@@ -60,17 +60,15 @@ function Register(props) {
         <View style={styles.form}>
           <Button
             title="Próximo passo"
-            onPress={() => props.navigation.navigate("register2")}
+            onPress={() => props.navigation.navigate("register2", {
+              nome: nome,
+              email: email,
+              senha: password1,
+            })}
             type={1}
           />
         </View>
       </View>
-
-      {/* <View style={styles.footer}>
-        <TouchableOpacity onPress={() => props.navigation.navigate("login")}>
-          <Text style={styles.footerText}>Acesse sua conta</Text>
-        </TouchableOpacity>
-      </View> */}
     </View>
   );
 }

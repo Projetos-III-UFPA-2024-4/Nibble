@@ -10,14 +10,39 @@ import { supermarkets } from "../../constants/dados.js";
 import Supermarket from "../../components/supermarket/supermarket.jsx";
 import Categorias from "../../components/categorias/categorias.jsx";
 import { categorias } from "../../constants/dados.js";
+import { useEffect, useState } from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { supermarkets } from "../../constants/dados.js";
+import Supermarket from "../../components/supermarket/supermarket.jsx";
+import api from "../../constants/api.js";
 
 function AbaHome(props) {
 
   function OpenProducts(){
     props.navigation.navigate("products")
   }
+  async function LoadCategory() {
+    try {
+      setLoading(true);
+      const response = await api.get("/categorias");
+
+      if(response.data){
+
+      }
+    } catch (error) {
+      if (error.response?.data.error)
+        Alert.alert(error.response.data.error);
+      else
+        Alert.alert("Ocorreu um erro. Tente novamente mais tarde");
+    }
+  }
 
   const [busca, setBusca] = useState("");
+  const [categorias, setCategorias] = useState([]);
+
+  useEffect(() => {
+    LoadCategory();
+  }, []);
 
   const fontsLoaded = useFredokaFonts();
 
