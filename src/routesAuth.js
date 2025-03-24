@@ -7,6 +7,7 @@ import DetalheProduto from "./screens/detalhe-produto/detalheProduto.jsx";
 import DetalhePedido from "./screens/detalhe-pedido/detalhePedido.jsx";
 import Checkout from "./screens/checkout/checkout.jsx";
 import { Text, TouchableOpacity } from "react-native";
+import AbaHomeEcoseller from "./screens/aba-home-ecoseller/aba-home-ecoseller.jsx";
 
 const Stack = createNativeStackNavigator();
 
@@ -63,6 +64,13 @@ function RoutesAuth() {
         <Stack.Screen
           name="search"
           component={Search}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="homeEcoseller"
+          component={AbaHomeEcoseller}
           options={{
             headerShown: false,
           }}

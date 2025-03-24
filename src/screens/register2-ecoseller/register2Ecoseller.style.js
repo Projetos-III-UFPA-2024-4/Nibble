@@ -4,20 +4,26 @@ export const styles = {
     justifyContent: "center", // Centraliza os elementos verticalmente
     alignItems: "center", // Centraliza os elementos horizontalmente
     backgroundColor: "green", // Define o fundo como verde
-  },
-  containerSwitch: {
-    top: -110, // Distância do topo
-    right: -85, // Distância da direita
-    zIndex: 10, // Garante que fique sobre outros elementos
-  },
-  switch: {
-    width: "50%",
-    marginBottom: 20,
+    marginTop: -80
   },
   form: {
     width: "100%",
     marginVertical: 15,
     alignItems: "center",
+  },
+  form30: {
+    flex: 3,
+    marginVertical: 15,
+    marginRight: 25,
+  },
+  form70: {
+    flex: 7,
+    marginVertical: 15,
+    marginLeft: 55,
+    marginRight: -70,
+  },
+  formHorizontal: {
+    flexDirection: "row",
   },
   formGroup: {
     width: "100%",
@@ -26,21 +32,12 @@ export const styles = {
 
   footer: {
     width: "100%",
-    marginBottom: 10,
+    marginTop: 30,
   },
   footerText: {
+    width: "100%",
     color: "white",
-    textAlign: "right",
-    marginRight: 60,
-  },
-  footerText1: {
-    color: "white",
-  },
-
-  footerLinkContainer: {
-    flexDirection: "row", // Organiza lado a lado
-    justifyContent: "center", // Centraliza horizontalmente
-    marginTop: 30,
+    textAlign: "center",
   },
   icon: {
     marginRight: 10,

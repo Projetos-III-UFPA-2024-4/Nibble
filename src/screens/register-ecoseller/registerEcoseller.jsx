@@ -1,5 +1,5 @@
-import { View, Text, TouchableOpacity } from "react-native";
-import { styles } from "./register.style.js";
+import { View, SectionList } from "react-native";
+import { styles } from "./registerEcoseller.style.js";
 import AppLoading from "expo-app-loading";
 import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import Header from "../../components/header/header.jsx";
@@ -7,7 +7,7 @@ import TextBoxLogin from "../../components/textboxlogin/textBoxLogin.jsx";
 import Button from "../../components/button/button.jsx";
 import { useState } from "react";
 
-function Register(props) {
+function RegisterEcoseller(props) {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState();
   const [password1, setPassword1] = useState();
@@ -25,7 +25,7 @@ function Register(props) {
       <View style={styles.formGroup}>
         <View style={styles.form}>
           <TextBoxLogin
-            placeholder="Nome Completo"
+            placeholder="Nome da empresa"
             onChangeText={(texto) => setNome(texto)}
             value={nome}
           />
@@ -33,7 +33,7 @@ function Register(props) {
 
         <View style={styles.form}>
           <TextBoxLogin
-            placeholder="E-mail"
+            placeholder="CNPJ"
             onChangeText={(texto) => setEmail(texto)}
             value={email}
           />
@@ -56,11 +56,10 @@ function Register(props) {
             value={password2}
           />
         </View>
-
         <View style={styles.form}>
           <Button
             title="Próximo passo"
-            onPress={() => props.navigation.navigate("register2")}
+            onPress={() => props.navigation.navigate("register2-ecoseller")}
             type={1}
           />
         </View>
@@ -74,4 +73,4 @@ function Register(props) {
     </View>
   );
 }
-export default Register;
+export default RegisterEcoseller;

@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity } from "react-native";
-import { styles } from "./login.style.js";
+import { styles } from "./loginEcoseller.style.js";
 import AppLoading from "expo-app-loading"; // Use SplashScreen se necessário
 import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import Header from "../../components/header/header.jsx";
@@ -8,7 +8,7 @@ import Button from "../../components/button/button.jsx";
 import { useState } from "react";
 import SwitchSelector from "react-native-switch-selector";
 
-function Login(props) {
+function LoginEcoseller(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState();
 
@@ -37,12 +37,12 @@ function Login(props) {
           fontSize={15}
           buttonColor={"#78c129"}
           options={options}
-          initial={0}
+          initial={1}
           borderWidth={2}
           borderColor={"black"}
           onPress={(value) => {
-            if (value == 1) {
-              props.navigation.navigate("login-ecoseller");
+            if (value == 0) {
+              props.navigation.navigate("login");
             }
           }}
         />
@@ -52,7 +52,7 @@ function Login(props) {
 
       <View style={styles.formGroup}>
         <View style={styles.form}>
-          <TextBoxLogin placeholder="E-mail" />
+          <TextBoxLogin placeholder="CNPJ" />
         </View>
 
         <View style={styles.form}>
@@ -72,7 +72,7 @@ function Login(props) {
         <View style={styles.footerLinkContainer}>
           <Text>Não possui uma conta? </Text>
           <TouchableOpacity
-            onPress={() => props.navigation.navigate("register")}
+            onPress={() => props.navigation.navigate("register-ecoseller")}
           >
             <Text style={styles.footerText1}>Crie agora</Text>
           </TouchableOpacity>
@@ -82,4 +82,4 @@ function Login(props) {
   );
 }
 
-export default Login;
+export default LoginEcoseller;

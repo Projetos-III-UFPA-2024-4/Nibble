@@ -18,8 +18,6 @@ function Button(props) {
             </TouchableOpacity>
         );
     }
-
-    // Caso não seja tipo 1 ou 2, retorne null ou algum outro comportamento desejado
     return null;
 }
 
