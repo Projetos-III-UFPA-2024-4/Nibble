@@ -5,7 +5,6 @@ import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import Header from "../../components/header/header.jsx";
 import TextBoxLogin from "../../components/textboxlogin/textBoxLogin.jsx";
 import Button from "../../components/button/button.jsx";
-import { useState } from "react";
 import SwitchSelector from "react-native-switch-selector";
 import { useContext, useEffect, useState } from "react";
 import api from "../../constants/api.js";

@@ -3,10 +3,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Register from "./screens/register/register";
 import Register2 from "./screens/register2/register2";
-import Home from "./screens/home/home";
-import Favorites from "./screens/favorites/favorites";
-import Orders from "./screens/orders/orders";
-import Profile from "./screens/profile/profile";
+import AbaHome from "./screens/aba-home/aba-home";
+import AbaFavorites from "./screens/aba-favorites/aba-favorites";
+import AbaOrders from "./screens/aba-orders/aba-orders";
+import AbaProfile from "./screens/aba-profile/aba-profile";
 
 const Stack = createNativeStackNavigator();
 

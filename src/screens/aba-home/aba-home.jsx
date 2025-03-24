@@ -5,15 +5,12 @@ import icons from "../../constants/icons.js";
 import { useFredokaFonts } from "../../assets/fonts/fontLoader.js";
 import AppLoading from "expo-app-loading";
 import TextBox from "../../components/textbox/textBox.jsx";
-import { useState } from "react";
-import { supermarkets } from "../../constants/dados.js";
 import Supermarket from "../../components/supermarket/supermarket.jsx";
 import Categorias from "../../components/categorias/categorias.jsx";
-import { categorias } from "../../constants/dados.js";
+import { categories } from "../../constants/dados.js";
 import { useEffect, useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { supermarkets } from "../../constants/dados.js";
-import Supermarket from "../../components/supermarket/supermarket.jsx";
 import api from "../../constants/api.js";
 
 function AbaHome(props) {
@@ -70,7 +67,7 @@ function AbaHome(props) {
       </View>
 
       <ScrollView showsVerticalScrollIndicator={false}>
-      <Categorias dados={categorias} />
+      <Categorias dados={categories} />
 
         {supermarkets.map((supermarket, index) => {
           return (

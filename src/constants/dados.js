@@ -6,7 +6,7 @@ export const estados = [
   'São Paulo', 'Sergipe', 'Tocantins'
 ];
 
-export const categorias = [
+export const categories = [
   {
     id: 1,
     descricao: "Laticínios",
