@@ -67,7 +67,7 @@ function AbaHome(props) {
       </View>
 
       <ScrollView showsVerticalScrollIndicator={false}>
-      <Categorias dados={categories} />
+      <Categorias />
 
         {supermarkets.map((supermarket, index) => {
           return (
