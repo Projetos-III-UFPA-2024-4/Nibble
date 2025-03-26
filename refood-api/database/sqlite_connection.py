@@ -1,7 +1,7 @@
 import sqlite3
 import os
 
-DB_PATH = 'c:/Users/Administrator/ReFood/refood-api/database/banco.db'
+DB_PATH = 'C:/Users/Administrator/Desktop/Nibble/refood-api/database/banco.db'
 
 def execute(query, params=None):
     """
