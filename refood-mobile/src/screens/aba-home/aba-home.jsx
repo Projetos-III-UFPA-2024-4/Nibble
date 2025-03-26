@@ -7,7 +7,6 @@ import AppLoading from "expo-app-loading";
 import TextBox from "../../components/textbox/textBox.jsx";
 import Supermarket from "../../components/supermarket/supermarket.jsx";
 import Categorias from "../../components/categorias/categorias.jsx";
-import { categories } from "../../constants/dados.js";
 import { useEffect, useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { supermarkets } from "../../constants/dados.js";
